@@ -1,0 +1,101 @@
+@echo off
+     :as
+	
+	echo created by legasis  created by legasis  created by legasis  created by legasis
+	echo ==============================================================================
+	echo .
+	echo Menu de selecao                criado por LEGASIS22 beta 1.1 pre
+	echo                                alguns bugs podem ser encontrados
+	Echo Clica 1 para adicao
+    echo clica 2 para subtracao
+    echo Clica 3 para multiplicacao
+    echo Clica 4 para divisao
+    echo Clica 5 para sair
+    echo Clica 6 para instrucoes
+	set /p type=
+    if %type%==1 goto a
+    if %type%==2 goto b
+    if %type%==3 goto c
+    if %type%==4 goto d
+    if %type%==5 goto e
+    if %type%==6 goto f
+	:a
+	echo adicao? (S/N)
+	set /p type=
+	if @type@==S goto aa
+	if @type@==N goto as
+    :aa
+	echo Por-favor escolhe 2 numeros que queiras somar
+    set /p num1=
+    set /p num2=
+    echo %num1%+%num2%?
+    pause
+    set /a Answer=%num1%+%num2%
+    echo %Answer%
+    pause
+    goto as
+     :b
+    echo Subtracao
+    echo Subtracao? (S/N)
+	set /p type=
+	if @type@==S goto bb
+	if @type@==N goto as
+	:bb
+	echo Por-favor escolhe 2 numeros que queiras subtrair
+    set /p num1=
+    set /p num2=
+    echo %num1%-%num2%?
+    pause
+    set /a Answer=%num1%-%num2%
+    echo %Answer%
+    pause
+    goto as
+     :c
+    echo Multiplicacao
+    echo Multiplicacao? (S/N)
+	set /p type=
+	if @type@==S goto cc
+	if @type@==N goto as
+    :cc
+	echo Por-favor escolhe 2 numeros que queiras multiplicar
+    set /p num1=
+    set /p num2=
+    echo %num1%*%num2%?
+    pause
+    set /a Answer=%num1%*%num2%
+    echo %Answer%
+    pause
+    goto as
+     :d
+    echo Divisão
+    echo Divisao? (S/N)
+	set /p type=
+	if @type@==S goto dd
+	if @type@==N goto as
+    :dd
+	echo Por-favor escolhe 2 numeros que queiras dividir
+    set /p num1=
+    set /p num2=
+    echo %num1%/%num2%?
+    pause
+    set /a Answer=%num1%/%num2%
+    echo %Answer%
+    pause
+    goto as
+     :e
+	echo sair? (S/N)
+	set /p type=
+	if @type@==S goto ee
+	if @type@==N goto as
+	:ee
+	echo. Feito! calculadora beta 1.0 pre
+	exit cmd.exe
+	:f
+	echo instrucoes? (S/N)
+	set /p type=
+	if @type@==S goto ff
+	if @type@==N goto as
+    :ff
+	echo Para fazer qualquer operacao escolher 2 numeros (MAX.) e clicar enter e de seguida escolher outros 2 numeros (MAX.) e clicar enter para confirmar a operacao
+	pause 
+	goto as
